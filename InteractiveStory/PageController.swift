@@ -36,6 +36,16 @@ class PageController: UIViewController {
         
         if let page = page {
             artworkView.image = page.story.artwork
+            
+            let attributedString = NSMutableAttributedString(string: page.story.text)
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 10
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+            
+            
+            storyLabel.attributedText = attributedString
         }
     }
 
@@ -56,6 +66,17 @@ class PageController: UIViewController {
             artworkView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             artworkView.rightAnchor.constraint(equalTo: view.rightAnchor),
             artworkView.leftAnchor.constraint(equalTo: view.leftAnchor)
+            ])
+        
+        view.addSubview(storyLabel)
+        storyLabel.numberOfLines = 0
+        storyLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            storyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0),
+            storyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0),
+            storyLabel.topAnchor.constraint(equalTo: view.centerYAnchor, constant: -48.0)
+            
             ])
     }
     
