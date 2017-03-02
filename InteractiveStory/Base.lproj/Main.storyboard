@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jGq-61-lqA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jGq-61-lqA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
                                 <rect key="frame" x="116" y="589" width="143" height="30"/>
                                 <state key="normal" title="Start Your Adventure"/>
                                 <connections>
-                                    <segue destination="SeJ-1d-8tA" kind="show" id="bvU-1A-RMC"/>
+                                    <segue destination="SeJ-1d-8tA" kind="show" identifier="startAdventure" id="bvU-1A-RMC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1054" y="-550"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Controller-->
         <scene sceneID="ca6-X0-Arw">
             <objects>
-                <viewController id="SeJ-1d-8tA" sceneMemberID="viewController">
+                <viewController id="SeJ-1d-8tA" customClass="PageController" customModule="InteractiveStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sD1-6Y-3ej"/>
                         <viewControllerLayoutGuide type="bottom" id="NSB-JJ-AFt"/>
